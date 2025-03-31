@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Info - Itemoheng Primary School</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header */
+    /* Header */
+#header {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers content horizontally */
+}
+
+/* H1 - Title */
+#header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px; /* Adds spacing between h1 and img */
+  color: #047094; /* Ensures visibility */
+}
+
+/* Image */
+#header img {
+  width: 100px;
+  height: auto;
+}
+
+
+    /* Navigation */
+    #header ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #header ul li {
+      margin: 0.5rem;
+    }
+
+    #header ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    #header ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    #main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .main_left,
+    .main_right {
+      flex: 1;
+      margin: 1rem;
+	  background-color: #047094;
+    }
+
+    .main_left img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .main_right {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .main_right p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .main_right a {
+      color: #047094;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main_right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: white;
+      color: #047094;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #header h1 {
+        font-size: 1.5rem;
+      }
+
+      #main {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .main_left,
+      .main_right {
+        margin: 0.5rem 0;
+      }
+
+      .main_right p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <!-- Header -->
+    <div id="header">
+		<h1>ITEMOHENG PRIMARY SCHOOL</h1>
+      <img src="itelogo.jpg" alt="Itemoheng Logo">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main">
+      <div class="main_left">
+        <img src="itma.jpg" alt="School Image">
+      </div>
+
+      <div class="main_right">
+        <p>
+          <b>Click &gt;&gt;&gt; <a href="2025.pdf">2025 SCHOOL CALENDAR</a> &lt;&lt;&lt; Click</b>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Copyright &copy; 2024 Itemoheng Primary School</p>
+    </footer>
+  </div>
+</body>
+</html>

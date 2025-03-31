@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Donations - Itemoheng Primary School</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header */
+   /* Header */
+#header {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers content horizontally */
+}
+
+/* H1 - Title */
+#header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px; /* Adds spacing between h1 and img */
+  color: #047094; /* Ensures visibility */
+}
+
+/* Image */
+#header img {
+  width: 100px;
+  height: auto;
+}
+
+    /* Navigation */
+    #header ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #header ul li {
+      margin: 0.5rem;
+    }
+
+    #header ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    #header ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    .donations-content {
+      padding: 2rem;
+      max-width: 1200px;
+      background-color: white;
+      margin: 2rem auto;
+     
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .donations-content h1 {
+      color: #047094;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .donations-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .donations-content a {
+      color: #047094;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .donations-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: white;
+      color: #047094;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #header h1 {
+        font-size: 1.5rem;
+      }
+
+      .donations-content {
+        padding: 1rem;
+      }
+
+      .donations-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .donations-content p {
+        font-size: 1rem;
+      }
+
+      .slideshow-container {
+        margin: 1rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <!-- Header -->
+    <div id="header">
+      <h1>ITEMOHENG PRIMARY SCHOOL</h1>
+      <img src="itelogo.jpg" alt="Itemoheng Logo">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="donations-content">
+      <h1>DONATIONS</h1>
+      <p>Dear Potential Donor or Sponsor,</p>
+      <p>
+        Itemoheng Primary School is serving the poorest of the poor. We are a quintile 1 school situated in Orange Farm Drieziek Extension 4. Companies and individuals are encouraged to donate money to the school, donate resources of value, or adopt needy children. Kindly contact Mr. MV Dladla, Principal, at <strong>011 850 1055</strong> or <strong>082 557 1288</strong>, or email at <a href="mailto:itemohengprimaryschool@gmail.com">itemohengprimaryschool@gmail.com</a>. Thank you.
+      </p>
+
+      <hr style="border: 1px solid #929494; margin: 2rem auto;">
+
+      <h1>CURRENT SPONSORS/DONORS</h1>
+      <div class="slideshow-container">
+        <img class="mySlides" src="images (54)_2.jpeg" alt="Sponsor 1">
+        <img class="mySlides" src="Web-Logo-Oct-2017-5.png" alt="Sponsor 2">
+        <img class="mySlides" src="images (53).jpeg" alt="Sponsor 3">
+        <img class="mySlides" src="images (5).png" alt="Sponsor 4">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Copyright &copy; 2024 Itemoheng Primary School</p>
+    </footer>
+  </div>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+  </script>
+</body>
+</html>
