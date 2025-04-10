@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Staff - Itemoheng Primary School</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-  <link rel="stylesheet" href="style.css">
   <style>
     /* General Styles */
     body {
@@ -18,28 +17,25 @@
     }
 
     /* Header */
-#header {
-  background-color: white;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column; /* Stacks items vertically */
-  align-items: center; /* Centers content horizontally */
-}
+    #header {
+      background-color: white;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* H1 - Title */
-#header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 10px; /* Adds spacing between h1 and img */
-  color: #047094; /* Ensures visibility */
-}
+    #header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #047094;
+    }
 
-/* Image */
-#header img {
-  width: 100px;
-  height: auto;
-}
-
+    #header img {
+      width: 100px;
+      height: auto;
+    }
 
     /* Navigation */
     #header ul {
@@ -49,6 +45,9 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      background-color: #047094;
+      padding: 0.5rem;
+      border-radius: 5px;
     }
 
     #header ul li {
@@ -70,10 +69,8 @@
     /* Main Content */
     .staff-content {
       padding: 2rem;
-      padding: 2rem;
       background-color: white;
       margin: 2rem auto;
-      background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       max-width: 1200px;
@@ -94,16 +91,22 @@
     }
 
     /* Tables */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
       font-size: 1rem;
       color: white;
       background-color: #047094;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 600px; /* Minimum width for the table */
     }
 
     .data-table th,
@@ -126,61 +129,50 @@
       background-color: #047094;
     }
 
-    /* Responsive Tables */
-    @media (max-width: 768px) {
+    /* Mobile View - Stacked Layout */
+    @media (max-width: 600px) {
       .data-table {
+        min-width: 100%;
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
       }
-
-      .data-table th,
-      .data-table td {
-        min-width: 100px; /* Ensure cells don't get too narrow */
+      
+      .data-table thead {
+        display: none;
       }
-    }
-
-    @media (max-width: 480px) {
-      .data-table {
+      
+      .data-table tbody {
         display: block;
-        overflow-x: auto;
+        width: 100%;
       }
-
-      .data-table thead,
-      .data-table tbody,
-      .data-table th,
-      .data-table td,
+      
       .data-table tr {
         display: block;
-      }
-
-      .data-table thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-
-      .data-table tr {
-        border: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
-
+      
       .data-table td {
-        border: none;
-        position: relative;
+        display: block;
+        text-align: right;
         padding-left: 50%;
-        text-align: left;
-        white-space: normal;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       }
-
+      
       .data-table td:before {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
         content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
         font-weight: bold;
-        color: #fff;
+        text-align: left;
+      }
+      
+      /* Ensure all cells have data-label */
+      .data-table td:not([data-label]) {
+        display: none;
       }
     }
 
@@ -220,135 +212,151 @@
     <div class="staff-content">
       <h1 class="section-title">EDUCATORS</h1>
 
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Principal</th>
-            <th>Deputy Principal</th>
-            <th>Deputy Principal</th>
-            <th>HOD Foundation Phase</th>
-            <th>HOD Foundation Phase</th>
-            <th>HOD Senior Phase</th>
-            <th>HOD Intermediate Phase</th>
-            <th>HOD Intermediate Phase</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Principal">MV Dladla</td>
-            <td data-label="Deputy Principal">LT Radebe</td>
-            <td data-label="Deputy Principal">Ms Khumalo</td>
-            <td data-label="HOD Foundation Phase">Mahlangu Bella</td>
-            <td data-label="HOD Foundation Phase">Hlongwane Glenda</td>
-            <td data-label="HOD Senior Phase">Malindi Themba</td>
-            <td data-label="HOD Intermediate Phase">Mbokwane Motia Thandiwe</td>
-            <td data-label="HOD Intermediate Phase">Kweza Faniswa Amelia</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Principal</th>
+              <th>Deputy Principal</th>
+              <th>Deputy Principal</th>
+              <th>HOD Foundation Phase</th>
+              <th>HOD Foundation Phase</th>
+              <th>HOD Senior Phase</th>
+              <th>HOD Intermediate Phase</th>
+              <th>HOD Intermediate Phase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Principal">MV Dladla</td>
+              <td data-label="Deputy Principal">LT Radebe</td>
+              <td data-label="Deputy Principal">Ms Khumalo</td>
+              <td data-label="HOD Foundation Phase">Mahlangu Bella</td>
+              <td data-label="HOD Foundation Phase">Hlongwane Glenda</td>
+              <td data-label="HOD Senior Phase">Malindi Themba</td>
+              <td data-label="HOD Intermediate Phase">Mbokwane Motia Thandiwe</td>
+              <td data-label="HOD Intermediate Phase">Kweza Faniswa Amelia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <hr class="divider">
 
-      <table class="data-table">
-        <tbody>
-          <tr>
-            <td data-label="Educator">Abalanne Poloko Patricia</td>
-            <td data-label="Educator">Coka Jabulile Doreen</td>
-            <td data-label="Educator">Nene Nondumiso</td>
-            <td data-label="Educator">Dladla Nompumelelo</td>
-            <td data-label="Educator">Gumede Londekile Happiness</td>
-          </tr>
-          <tr>
-            <td data-label="Educator">Khumalo Thozama</td>
-            <td data-label="Educator">Kula Nomaqala Given</td>
-            <td data-label="Educator">Langa Itumeleng</td>
-            <td data-label="Educator">Lekgori Poppy</td>
-            <td data-label="Educator"></td>
-          </tr>
-          <tr>
-            <td>Lepeli Khotsofalang</td>
-            <td>Nozozo</td>
-            <td>Matshitese-Fokane Queen</td>
-            <td>Mazibuko Nokukhanya Jeaneth</td>
-            <td>Mbele Khethiwe Idah</td>
-          </tr>
-          <tr>
-            <td>Mokwane-Motia Thandiwe Caroline</td>
-            <td>Mofokeng Francinah Matshidiso</td>
-            <td>Mhlongo Nondumiso</td>
-            <td>Mtimkhulu Mitta Nobelungu</td>
-            <td>Mtshali Ntmbifuthi Ritta</td>
-          </tr>
-          <tr>
-            <td>Nale Lebohang</td>
-            <td>Ndaba Siphesihle</td>
-            <td>Ndlovu Nonkululeko Lynette</td>
-            <td>Ndzakana Nomaledi Ivy</td>
-            <td>Nhlapo Annah Bikinyana</td>
-          </tr>
-          <tr>
-            <td>Nkhi Harold Moabi</td>
-            <td>Mazibuko Siphesihle</td>
-            <td>Sandi Petrus Dikgang</td>
-            <td>Seatla Anna</td>
-            <td>Bosiu</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Ziqubu Rebecca Cabakhile</td>
-            <td>Zondo Nomvula</td>
-            <td>Zwane Nodathweni Alleta</td>
-            <td>Malindi Themba</td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Educator</th>
+              <th>Educator</th>
+              <th>Educator</th>
+              <th>Educator</th>
+              <th>Educator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Educator">Abalanne Poloko Patricia</td>
+              <td data-label="Educator">Coka Jabulile Doreen</td>
+              <td data-label="Educator">Nene Nondumiso</td>
+              <td data-label="Educator">Dladla Nompumelelo</td>
+              <td data-label="Educator">Gumede Londekile Happiness</td>
+            </tr>
+            <tr>
+              <td data-label="Educator">Khumalo Thozama</td>
+              <td data-label="Educator">Kula Nomaqala Given</td>
+              <td data-label="Educator">Langa Itumeleng</td>
+              <td data-label="Educator">Lekgori Poppy</td>
+              <td data-label="Educator"></td>
+            </tr>
+            <tr>
+              <td data-label="Educator">Lepeli Khotsofalang</td>
+              <td data-label="Educator">Nozozo</td>
+              <td data-label="Educator">Matshitese-Fokane Queen</td>
+              <td data-label="Educator">Mazibuko Nokukhanya Jeaneth</td>
+              <td data-label="Educator">Mbele Khethiwe Idah</td>
+            </tr>
+            <tr>
+              <td data-label="Educator">Mokwane-Motia Thandiwe Caroline</td>
+              <td data-label="Educator">Mofokeng Francinah Matshidiso</td>
+              <td data-label="Educator">Mhlongo Nondumiso</td>
+              <td data-label="Educator">Mtimkhulu Mitta Nobelungu</td>
+              <td data-label="Educator">Mtshali Ntmbifuthi Ritta</td>
+            </tr>
+            <tr>
+              <td data-label="Educator">Nale Lebohang</td>
+              <td data-label="Educator">Ndaba Siphesihle</td>
+              <td data-label="Educator">Ndlovu Nonkululeko Lynette</td>
+              <td data-label="Educator">Ndzakana Nomaledi Ivy</td>
+              <td data-label="Educator">Nhlapo Annah Bikinyana</td>
+            </tr>
+            <tr>
+              <td data-label="Educator">Nkhi Harold Moabi</td>
+              <td data-label="Educator">Mazibuko Siphesihle</td>
+              <td data-label="Educator">Sandi Petrus Dikgang</td>
+              <td data-label="Educator">Seatla Anna</td>
+              <td data-label="Educator">Bosiu</td>
+            </tr>
+            <tr>
+              <td data-label="Educator"></td>
+              <td data-label="Educator">Ziqubu Rebecca Cabakhile</td>
+              <td data-label="Educator">Zondo Nomvula</td>
+              <td data-label="Educator">Zwane Nodathweni Alleta</td>
+              <td data-label="Educator">Malindi Themba</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <hr class="divider">
 
       <h1 class="section-title">MAINTENANCE</h1>
 
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Maintenance</th>
-            <th>Maintenance</th>
-            <th>Maintenance</th>
-            <th>Maintenance</th>
-            <th>Maintenance</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Maintenance">Ganda Dan</td>
-            <td data-label="Maintenance">Mofokeng Nthabeleng Antonia</td>
-            <td data-label="Maintenance">Ndlovu Elias Hluphi</td>
-            <td data-label="Maintenance">Thusi Constance Thobekile</td>
-            <td data-label="Maintenance">Tshabalala Edward</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Maintenance</th>
+              <th>Maintenance</th>
+              <th>Maintenance</th>
+              <th>Maintenance</th>
+              <th>Maintenance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Maintenance">Ganda Dan</td>
+              <td data-label="Maintenance">Mofokeng Nthabeleng Antonia</td>
+              <td data-label="Maintenance">Ndlovu Elias Hluphi</td>
+              <td data-label="Maintenance">Thusi Constance Thobekile</td>
+              <td data-label="Maintenance">Tshabalala Edward</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <hr class="divider">
 
       <h1 class="section-title">ADMIN</h1>
 
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Admin</th>
-            <th>Admin</th>
-            <th>Admin</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Admin">Mokoena-Mdlungu Sophie Mosidinyane</td>
-            <td data-label="Admin">Matobako Maleshoane</td>
-            <td data-label="Admin">Kgotleng Gloria</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Admin</th>
+              <th>Admin</th>
+              <th>Admin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Admin">Mokoena-Mdlungu Sophie Mosidinyane</td>
+              <td data-label="Admin">Matobako Maleshoane</td>
+              <td data-label="Admin">Kgotleng Gloria</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Footer -->
