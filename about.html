@@ -17,53 +17,57 @@
     }
 
     /* Header */
-#header {
-  background-color: white;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column; /* Stacks items vertically */
-  align-items: center; /* Centers content horizontally */
-}
+    #header {
+      background-color: white;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* H1 - Title */
-#header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 10px; /* Adds spacing between h1 and img */
-  color: #047094; /* Ensures visibility */
-}
+    #header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #047094;
+    }
 
-/* Image */
-#header img {
-  width: 100px;
-  height: auto;
-}
-
+    #header img {
+      width: 100px;
+      height: auto;
+      max-width: 100%;
+    }
 
     /* Navigation */
     #header ul {
       list-style: none;
-      padding: 0;
+      padding: 0.5rem;
       margin: 1rem 0 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      background-color: #047094;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 600px;
     }
 
     #header ul li {
-      margin: 0.5rem;
+      margin: 0.3rem;
     }
 
     #header ul li a {
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.8rem;
       border-radius: 5px;
       transition: background 0.3s ease;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     #header ul li a:hover {
-      background-color:rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     /* Content Section */
